@@ -16,6 +16,9 @@ sudo apt-get install wimtools <br/>
 (iso et .bash dans le même doosier )<br/>
 sudo bash woeusb-v.v.v.bash --device Win11_22H2_French_x64v1.iso /dev/sda1<br/>
 
+## Resoudre le problème de grésillement quand aucun son 
+echo 0 | sudo tee /sys/module/snd_hda_intel/parameters/power_save
+
 ## Utiliser une partition de la clé
 sudo bash woeusb-v.v.v.bash --partition $PWD/Win11_22H2_French_x64v1.iso /dev/sda1<br/>
 <br/>
